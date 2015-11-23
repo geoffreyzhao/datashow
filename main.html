@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="animate.min.css">
+	<link rel="stylesheet" type="text/css" href="page.css">
+
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="swiper.min.js"></script>
+    <script type="text/javascript" src="swiper.animate1.0.2.min.js"></script>
+    <script type="text/javascript" src="echarts-all.js"></script>
+    <script type="text/javascript" src="underscore-min.js"></script>
+    <script type="text/javascript" src="plugin.js"></script>
+
+	<title>不夜城采购商销售监控</title>
+</head>
+<body>
+	<header class="header">
+		<div>真旅网数据中心</div>
+	</header>
+
+	<section class="mainContaier">
+		<div class="title-time">数据更新时间：<em>2015-11-19 15:30:26</em></div>
+		<div class="top-block">
+			<div class="main-title">今日支付金额(元)</div>
+			<div class="main-amount-block clearfix">
+				<div class="main-amount-cont fl">
+					<!-- 添加crtm class的数字会被转格式 -->
+					<div id="main-amount-num" class="main-amount-num clearfix"></div>
+				</div>
+				<div class="fl appWeightBlock">
+					<canvas id="appWeightCanvas"></canvas>
+					<div class="appWeightState">
+						<span class="title">无线端</span><br>
+						<span class="value">68.64%</span>
+					</div>
+				</div>
+			</div>
+			<div class="amount-summary clearfix">
+				<div class="fl">
+					<span class="sub-title">昨日支付金额(元)：</span>
+					<em class="money crtm">123456</em>
+				</div>
+				<div class="fl">
+					<span class="sub-title">今年累计支付金额(元)：</span>
+					<em class="money crtm">123456789</em>
+				</div>
+			</div>
+			<div class="total-layer">
+				<div>
+					<p class="title">本月销售目标(元)</p>
+					<p class="amount crtm">1000000000</p>
+				</div>
+				<div>
+					<p class="title">本月累计销售(元)</p>
+					<p class="amount crtm">1820560890</p>
+				</div>
+				<div class="percent-completion-block">
+					<p>
+						<span class="sub-title">已完成</span>
+						<span class="percent">38.90%</span>
+					</p>
+					<p class="com-per-bar">
+						<span></span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-block">
+			<div class="lock-oper-block"><!-- 待替换为图片  -->
+				<span class="lock-slide">锁定自动轮播</span>
+				<span class="unlock-slide">解锁</span>
+			</div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide clearfix">
+						<div class="left-cont-block fl">
+							<div class="main-title">采购商平台销售监控</div>
+							<table class="pay-info-tb">							
+								<tbody>
+									<tr>
+										<th>支付<br>订单数</th>
+										<td>1,200</td>
+									</tr>
+									<tr>
+										<th>支付<br>金额</th>
+										<td>35,450</td>
+									</tr>
+									<tr>
+										<th>支付<br>用户数</th>
+										<td>451</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="middle-cont-block fl" style="margin-left:-20px;">
+							<div class="chart-legend clearfix">
+								<div class="left-legend fl">
+									<span class="legend-title">竞店<br>支付金额(元)</span>
+									<span class="legend-value">91,562</span>
+								</div>
+								<div class="right-legend fr">
+									<span class="legend-title">今日预测<br>支付金额(元)</span>
+									<span class="legend-value">19,291,562</span>
+								</div>
+							</div>
+							<div id="chart" style="height:380px;width:900px;"></div>
+						</div>
+						<div class="right-cont-block fl" style="margin-left:-50px;">
+							<div class="main-title">热销商品排行</div>
+							<!-- <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">内容</p> -->
+							<ul class="hot-sale-list">
+							    <li class="hot-sale-item ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.65s" swiper-animate-delay="0.1s">
+							    	<div class="sale-container">
+							    		<span class="sort-num">1</span>
+							    		<img src="product-img.jpg" alt="">
+							    		<span class="title">2016年 不夜城国旅 歌诗达邮轮包船航次</span>
+							    		<span class="total-sale">3,560元</span>
+							    	</div>
+							    </li>
+							    <li class="hot-sale-item ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.65s" swiper-animate-delay="0.2s">
+							    	<div class="sale-container">
+							    		<span class="sort-num">2</span>
+							    		<img src="product-img.jpg" alt="">
+							    		<span class="title">2016年 不夜城国旅 歌诗达邮轮包船航次</span>
+							    		<span class="total-sale">3,560元</span>
+							    	</div>
+							    </li>
+							    <li class="hot-sale-item ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.65s" swiper-animate-delay="0.3s">
+							    	<div class="sale-container">
+							    		<span class="sort-num">3</span>
+							    		<img src="product-img.jpg" alt="">
+							    		<span class="title">2016年 不夜城国旅 歌诗达邮轮包船航次</span>
+							    		<span class="total-sale">3,560元</span>
+							    	</div>
+							    </li>
+							    <li class="hot-sale-item ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.65s" swiper-animate-delay="0.4s">
+							    	<div class="sale-container">
+							    		<span class="sort-num">4</span>
+							    		<img src="product-img.jpg" alt="">
+							    		<span class="title">2016年 不夜城国旅 歌诗达邮轮包船航次</span>
+							    		<span class="total-sale">3,560元</span>
+							    	</div>
+							    </li>
+							    <li class="hot-sale-item ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.65s" swiper-animate-delay="0.5s">
+							    	<div class="sale-container">
+							    		<span class="sort-num">5</span>
+							    		<img src="product-img.jpg" alt="">
+							    		<span class="title">2016年 不夜城国旅 歌诗达邮轮包船航次</span>
+							    		<span class="total-sale">1.2万元</span>
+							    	</div>
+							    </li>
+							</ul>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<p>slider 2</p>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<center class="copyright">
+            Copyright © 2015 真旅网 All Rights Reserved.      沪ICP备08101503号
+        </center>
+	</footer>
+
+	<script type="text/javascript">
+		$(function(){
+
+			//  echarts 初始化
+			var myChart = echarts.init(document.getElementById('chart'));
+	        var option = {
+	            legend: {
+	                data:['竞店支付金额(万元)','今日预测支付金额(万元)'],
+	                show: false
+	            },
+	            toolbox: {
+	                show : false
+	            },
+	            xAxis : [
+	                {
+	                    type : 'category',
+	                    data : ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23'],
+	                    axisLine: {
+	                    	show: false
+	                    },
+	                    axisTick: {
+	                    	show: false
+	                    },
+	                    axisLabel: {
+	                    	textStyle: {
+	                    		color: '#6873a2',
+	                    		fontSize: 16
+	                    	}
+	                    },
+	                    splitLine: {
+	                    	show: false
+	                    }
+	                }
+	            ],
+	            yAxis : [
+	                {
+	                    type : 'value',
+	                    splitArea : {show : false},
+	                    splitLine: {
+	                    	lineStyle: {
+	                    		color: '#12141b'
+	                    	}
+	                    },
+	                    axisLine: {
+	                    	show: false
+	                    },
+	                    axisLabel: {
+	                    	textStyle: {
+	                    		color: '#6873a2',
+	                    		fontSize: 18
+	                    	},
+	                    	formatter: '{value}万'
+	                    },
+	                    min: 0,
+	                    splitNumber: 5
+	                }
+	            ],
+	            series : [
+	                {
+	                    name:'竞店支付金额(万元)',
+	                    type:'line',
+	                    data:[0.5, 0.5, 0.5, 0.8, 1.5, 3.5, 5.5, 6.2, 10.8, 12.0, 13.5, 14.2],
+	                    itemStyle: {
+		                	normal: {
+		                		lineStyle: {
+		                			color: '#048bf5',
+		                			type: 'solid',
+		                			width: 1
+		                		}
+		                	}
+		                },
+		                smooth: true,
+		                symbol: 'none'
+	                },
+	                {
+	                    name:'今日预测支付金额(万元)',
+	                    type:'line',
+	                    data:[2.5, 2.5, 3.5, 4.8, 5.5, 6.5, 8.5, 10.2, 13.8, 15.0, 17.5, 19.2,
+	                    21.5, 24.5, 26.5, 28.8, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5, 29.5],
+	                    itemStyle: {
+		                	normal: {
+		                		lineStyle: {
+		                			color: '#35dee2',
+		                			type: 'dashed',
+		                			width: 1
+		                		}
+		                	}
+		                },
+		                symbol: 'none'
+	                }
+	            ],
+	            tooltip: {
+	            	axisPointer: {
+	            		type: 'line',
+	            		lineStyle: {
+	            			color: '#fff',
+	            			width: 1
+	            		}
+	            	},
+	            	formatter: '{b0}时<br>{a0}: {c0}<br>{a1}: {c1}',
+	            	trigger: 'axis'
+	            }
+	        };
+        	myChart.setOption(option);
+
+        	// class 为 crtm 的数字都会转化为添加 ',' 的字符串
+        	$(".crtm").convtMoney();
+
+        	// AniScrollNum 数字滚动对象初始化
+        	var scrollNum = new AniScrollNum($("#main-amount-num"), 1234).init();
+
+        	// 临时效果
+        	setInterval(function(){
+        		var num = scrollNum.getNum();
+        		num += parseInt(Math.random() * 10000);
+        		scrollNum.setNum(num);
+        	}, 2000);
+
+        	// 圆形百分比 canvas
+        	var canvas=document.getElementById('appWeightCanvas');
+			var ctx = canvas.getContext('2d');
+			var circ = Math.PI * 2;
+			var quart = Math.PI / 2;
+
+			canvas.width = 136;
+			canvas.height = 136;
+
+			ctx.beginPath();
+			ctx.arc(68,68,63,0,circ,true);
+			ctx.closePath();
+			ctx.strokeStyle = '#656d9a';
+			ctx.lineWidth = 5.0;
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.arc(68,68,63,-quart,circ * 0.6864 - quart,false);	//  0.6864 = 68.64% 替换该值
+			ctx.strokeStyle = '#30c5cc';
+			ctx.lineWidth = 5.0;
+			ctx.stroke();
+
+			
+			comPerBar(0);
+			setInterval(function(){
+				comPerBar(Math.random()*100);
+			}, 2000);
+
+			// swiper 初始化
+			var mySwiper = new Swiper ('.swiper-container', {
+				onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+					swiperAnimateCache(swiper); //隐藏动画元素 
+					swiperAnimate(swiper); //初始化完成开始动画
+				}, 
+				onSlideChangeEnd: function(swiper){ 
+					swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+				},
+				pagination: '.swiper-pagination',
+				paginationClickable: true,
+				heigth: 560,
+				autoplay: 4000,
+				speed: 800
+			});
+
+			$(".lock-slide").click(function(){
+				mySwiper.stopAutoplay();
+			});
+
+			$(".unlock-slide").click(function(){
+				mySwiper.startAutoplay();
+			});
+			
+		});
+
+		// 完成百分比条
+		function comPerBar(percent) {
+			var w_bar = $(".com-per-bar").outerWidth();
+			$(".com-per-bar span").animate({
+				width: (w_bar * percent / 100) + "px"
+			}, 1000);
+		}
+	</script>
+</body>
+</html>

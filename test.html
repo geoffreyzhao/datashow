@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="animate.min.css">
+	<link rel="stylesheet" type="text/css" href="page.css">
+
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="swiper.min.js"></script>
+    <script type="text/javascript" src="swiper.animate1.0.2.min.js"></script>
+    <script type="text/javascript" src="echarts-all.js"></script>
+    <script type="text/javascript" src="underscore-min.js"></script>
+    <script type="text/javascript" src="plugin.js"></script>
+
+	<title>测试</title>
+
+	<style type="text/css" media="screen">
+		body {
+			background-color: #fff;
+			font-size: 40px;
+		}
+
+		.ani-scroll-num {
+			margin: 30px;			
+		}
+
+		.ani-scroll-num ul {
+			height: 52px;
+			overflow: hidden;
+			position: relative;
+			width: 24px;
+		}
+
+		.separator {
+
+		}
+
+		.ani-scroll-num li {
+			position: absolute;
+			-webkit-transition: all .5s ease;
+			   -moz-transition: all .5s ease;
+			    -ms-transition: all .5s ease;
+			     -o-transition: all .5s ease;
+			        transition: all .5s ease;
+		}
+	</style>
+</head>
+<body>
+		
+
+	<div id="test" class="ani-scroll-num">
+	</div>
+
+	<script type="text/javascript">
+
+		var n;
+
+		$(function(){
+
+			n = new AniScrollNum($("#test"), 456).init();
+
+			setInterval(function(){
+				var cur_num = n.getNum();
+				cur_num += 248;
+				console.log(cur_num);
+				n.setNum(cur_num);
+			}, 1000);
+		});
+		
+	</script>
+</body>
+</html>
