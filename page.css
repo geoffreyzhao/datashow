@@ -42,7 +42,7 @@ body {
 
 .mainContaier {
 	width: 90%;
-	min-width: 1200px;
+	min-width: 1730px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -353,4 +353,107 @@ body {
 	position: absolute;
 	right: 20px;
 	top: 10px;
+}
+
+/*  排行列表页  */
+
+.sort-item {
+	height: 50px;
+	line-height: 50px;
+	background-color: #232837;
+	margin-top: 5px;
+}
+
+.sort-item.head {
+	background-color: #2e3242;
+}
+
+.sort-item .td_sortnum {
+	width: 80px;
+	font-family: Arial;
+	font-size: 22px;
+}
+
+.sort-item .td_shopname {
+	width: 320px;
+	font-size: 22px;
+}
+
+.sort-item .td_sales {
+	width: 120px;
+	color: #33d3d9;
+	font-size: 24px;
+	font-family: Arial;
+}
+
+.sort-item span {
+	color: #b5bad2;
+	display: inline-block;
+	text-align: center;
+	overflow: hidden;
+}
+
+.sort-item.head span {
+	color: #6873a2;
+	font-family: "Microsoft Yahei",Arial,sans-serif;
+	font-size: 22px;
+}
+
+.sort-item.current {
+	background-color: #183a5c;
+}
+
+.sort-item.current span {
+	color: #33d3d9;
+}
+
+.sort-list {
+	width: 531px;
+	margin-right: 25px;
+}
+
+.sort-list:last-child {
+	margin-right: 0;
+}
+
+.category-sub-title {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 25px 0 15px 0;
+}
+
+.category-main-title {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.category-main-title span {
+	font-size: 18px;
+}
+
+.wallet-icon {
+	background: url(bg-icons.png) no-repeat;
+	background-position: -24px 0;
+	width: 21px;
+	height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.house-icon {
+	background: url(bg-icons.png) no-repeat;
+	background-position: 0 0;
+	width: 21px;
+	height: 21px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.thumb-icon {
+	background: url(bg-icons.png) no-repeat;
+	background-position: -48px 0;
+	width: 21px;
+	height: 21px;
+	display: inline-block;
+	vertical-align: middle;
 }

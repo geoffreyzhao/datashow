@@ -27,7 +27,7 @@
 	<section class="mainContaier">
 		<div class="title-time">数据更新时间：<em>2015-11-19 15:30:26</em></div>
 		<div class="top-block">
-			<div class="main-title">今日支付金额(元)</div>
+			<div class="main-title"><i class="wallet-icon"></i>今日支付金额(元)</div>
 			<div class="main-amount-block clearfix">
 				<div class="main-amount-cont fl">
 					<!-- 添加crtm class的数字会被转格式 -->
@@ -80,7 +80,7 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide clearfix">
 						<div class="left-cont-block fl">
-							<div class="main-title">采购商平台销售监控</div>
+							<div class="main-title"><i class="house-icon"></i>采购商平台销售监控</div>
 							<table class="pay-info-tb">							
 								<tbody>
 									<tr>
@@ -109,10 +109,10 @@
 									<span class="legend-value">19,291,562</span>
 								</div>
 							</div>
-							<div id="chart" style="height:380px;width:900px;"></div>
+							<div id="chart" style="height:380px;width:850px;"></div>
 						</div>
-						<div class="right-cont-block fl" style="margin-left:-50px;">
-							<div class="main-title">热销商品排行</div>
+						<div class="right-cont-block fl" style="margin-left:-15px;">
+							<div class="main-title"><i class="thumb-icon"></i>热销商品排行</div>
 							<!-- <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">内容</p> -->
 							<ul class="hot-sale-list">
 							    <li class="hot-sale-item ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.65s" swiper-animate-delay="0.1s">
@@ -285,11 +285,11 @@
         	var scrollNum = new AniScrollNum($("#main-amount-num"), 1234).init();
 
         	// 临时效果
-        	setInterval(function(){
-        		var num = scrollNum.getNum();
-        		num += parseInt(Math.random() * 10000);
-        		scrollNum.setNum(num);
-        	}, 2000);
+        	// setInterval(function(){
+        	// 	var num = scrollNum.getNum();
+        	// 	num += parseInt(Math.random() * 10000);
+        	// 	scrollNum.setNum(num);
+        	// }, 2000);
 
         	// 圆形百分比 canvas
         	var canvas=document.getElementById('appWeightCanvas');
@@ -331,7 +331,7 @@
 				pagination: '.swiper-pagination',
 				paginationClickable: true,
 				heigth: 560,
-				autoplay: 4000,
+				// autoplay: 4000,
 				speed: 800
 			});
 
