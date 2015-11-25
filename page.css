@@ -325,6 +325,7 @@ body {
 	border-radius: 7px;
 	background-color: #656d9a;
 	margin-top: 15px;
+	position: relative;
 }
 
 .com-per-bar span {
@@ -333,6 +334,17 @@ body {
 	border-radius: 7px;
 	background-color: #30c5cc;
 	position: absolute;
+}
+
+.com-per-bar .light {
+	display: inline-block;
+	background-color: #fff;
+	width: 7px;
+	height: 7px;
+	border-radius: 4px;
+	position: absolute;
+	left: 0;
+	box-shadow: 0 0 7px 2px #fff;
 }
 
 .header {
@@ -351,8 +363,8 @@ body {
 
 .lock-oper-block {
 	position: absolute;
-	right: 20px;
-	top: 10px;
+	right: 0px;
+	top: 0px;
 }
 
 /*  排行列表页  */
@@ -410,6 +422,7 @@ body {
 .sort-list {
 	width: 531px;
 	margin-right: 25px;
+	margin-bottom: 60px;
 }
 
 .sort-list:last-child {
@@ -433,27 +446,58 @@ body {
 
 .wallet-icon {
 	background: url(bg-icons.png) no-repeat;
-	background-position: -24px 0;
-	width: 21px;
-	height: 20px;
+	background-position: 0 0;
+	width: 32px;
+	height: 32px;
 	display: inline-block;
 	vertical-align: middle;
+	margin-right: 5px;
+	margin-top: -2px;
 }
 
 .house-icon {
 	background: url(bg-icons.png) no-repeat;
-	background-position: 0 0;
-	width: 21px;
-	height: 21px;
+	background-position: -36px 0;
+	width: 32px;
+	height: 32px;
 	display: inline-block;
 	vertical-align: middle;
+	margin-right: 5px;
+	margin-top: -5px;
 }
 
 .thumb-icon {
 	background: url(bg-icons.png) no-repeat;
-	background-position: -48px 0;
-	width: 21px;
-	height: 21px;
+	background-position: -72px 0;
+	width: 32px;
+	height: 32px;
 	display: inline-block;
 	vertical-align: middle;
+	margin-right: 5px;
+	margin-top: -5px;
+}
+
+.phone-icon {
+	background: url(bg-icons.png) no-repeat;
+	background-position: -109px 0;
+	width: 12px;
+	height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-top: -3px;
+}
+
+.lock-icon {
+	background: url(bg-icons.png) no-repeat;
+	background-position: -59px -64px;
+	width: 56px;
+	height: 56px;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.lock-icon.unlock {
+	background-position: 0 -64px;
 }

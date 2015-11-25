@@ -31,8 +31,7 @@
 			</div>
 			<div class="category-sub-title">热销店铺排行</div>
 			<div class="lock-oper-block"><!-- 待替换为图片  -->
-				<span class="lock-slide">锁定自动轮播</span>
-				<span class="unlock-slide">解锁</span>
+				<i class="lock-icon unlock"></i>
 			</div>
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
@@ -224,9 +223,6 @@
 	<script type="text/javascript">
 		$(function(){
 
-        	// class 为 crtm 的数字都会转化为添加 ',' 的字符串
-        	$(".crtm").convtMoney();
-
 			// swiper 初始化
 			var mySwiper = new Swiper ('.swiper-container', {
 				onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
@@ -238,16 +234,18 @@
 				},
 				pagination: '.swiper-pagination',
 				paginationClickable: true,
-				autoplay: 4000,
+				autoplay: 2500,
 				speed: 800
 			});
 
-			$(".lock-slide").click(function(){
-				mySwiper.stopAutoplay();
-			});
+			$(".lock-icon").click(function(){
 
-			$(".unlock-slide").click(function(){
-				mySwiper.startAutoplay();
+				if ($(this).hasClass("unlock")) {
+					mySwiper.stopAutoplay();
+				} else {
+					mySwiper.startAutoplay();
+				}
+				$(this).toggleClass("unlock");
 			});
 
 			$(".td_sales").convtMoney();

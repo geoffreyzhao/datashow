@@ -36,7 +36,7 @@
 				<div class="fl appWeightBlock">
 					<canvas id="appWeightCanvas"></canvas>
 					<div class="appWeightState">
-						<span class="title">无线端</span><br>
+						<span class="title"><i class="phone-icon"></i>无线端</span><br>
 						<span class="value">68.64%</span>
 					</div>
 				</div>
@@ -66,15 +66,15 @@
 						<span class="percent">38.90%</span>
 					</p>
 					<p class="com-per-bar">
-						<span></span>
+						<span class="bar"></span>
+						<em class="light"></em>
 					</p>
 				</div>
 			</div>
 		</div>
 		<div class="bottom-block">
 			<div class="lock-oper-block"><!-- 待替换为图片  -->
-				<span class="lock-slide">锁定自动轮播</span>
-				<span class="unlock-slide">解锁</span>
+				<i class="lock-icon unlock"></i>
 			</div>
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
@@ -111,7 +111,7 @@
 							</div>
 							<div id="chart" style="height:380px;width:850px;"></div>
 						</div>
-						<div class="right-cont-block fl" style="margin-left:-15px;">
+						<div class="right-cont-block fl" style="margin-left:-35px;">
 							<div class="main-title"><i class="thumb-icon"></i>热销商品排行</div>
 							<!-- <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">内容</p> -->
 							<ul class="hot-sale-list">
@@ -314,10 +314,10 @@
 			ctx.stroke();
 
 			
-			comPerBar(0);
+			comPerBar(35.45);
 			setInterval(function(){
 				comPerBar(Math.random()*100);
-			}, 2000);
+			}, 2000)
 
 			// swiper 初始化
 			var mySwiper = new Swiper ('.swiper-container', {
@@ -331,16 +331,18 @@
 				pagination: '.swiper-pagination',
 				paginationClickable: true,
 				heigth: 560,
-				// autoplay: 4000,
+				autoplay: 2500,
 				speed: 800
 			});
 
-			$(".lock-slide").click(function(){
-				mySwiper.stopAutoplay();
-			});
+			$(".lock-icon").click(function(){
 
-			$(".unlock-slide").click(function(){
-				mySwiper.startAutoplay();
+				if ($(this).hasClass("unlock")) {
+					mySwiper.stopAutoplay();
+				} else {
+					mySwiper.startAutoplay();
+				}
+				$(this).toggleClass("unlock");
 			});
 			
 		});
@@ -348,8 +350,12 @@
 		// 完成百分比条
 		function comPerBar(percent) {
 			var w_bar = $(".com-per-bar").outerWidth();
-			$(".com-per-bar span").animate({
+			$(".com-per-bar .bar").animate({
 				width: (w_bar * percent / 100) + "px"
+			}, 1000);
+
+			$(".com-per-bar .light").animate({
+				left: (w_bar * percent / 100) + "px"
 			}, 1000);
 		}
 	</script>
