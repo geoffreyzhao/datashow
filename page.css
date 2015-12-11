@@ -501,3 +501,482 @@ body {
 .lock-icon.unlock {
 	background-position: 0 -64px;
 }
+
+.swiper-container .tip-block {
+	position: absolute;
+	color: #6873a2;
+	bottom: 0;
+}
+
+/*  media 适应电视屏幕  */
+
+@media screen and (-webkit-min-device-pixel-ratio:1.5) {
+	body {
+		background-color: rgba(78,78,86,1);
+		color: #6873a2;
+		font-size: 12px;
+		font-family: "Microsoft Yahei",Arial,sans-serif;
+	}
+
+	.mainContaier {
+		width: 90%;
+		min-width: 1180px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.title-time {
+		margin: 2px 0;
+		color: #5b7896;
+		font-size: 10px;
+	}
+
+	.top-block {
+		border-top: 3px solid #30c5cc;
+		padding: 15px 35px;
+		background-color: #1d2026;
+		position: relative;
+	}
+
+	.bottom-block {
+		border-top: 3px solid #4c5868;
+		padding: 15px 35px;
+		background-color: rgba(33,36,47,.9);
+		position: relative;
+	}
+
+	.total-layer {
+		width: 220px;
+		height: 225px;
+		padding: 24px 28px;
+		background-color: #282937;
+		position: absolute;
+		right: 60px;
+		bottom: 15px;
+		font-size: 14px;
+	}
+
+	.total-layer > div {
+		margin-bottom: 20px;
+	}
+
+	.total-layer > div:last-child {
+		margin-bottom: 0;
+	}
+
+	.total-layer .title {
+		margin-bottom: 8px;
+		font-size: 16px;
+	}
+
+	.total-layer .amount {
+		color: #b5bad2;
+		font-size: 21px;
+		font-family: Arial;
+	}
+
+	.main-amount-cont {
+		margin-bottom: 15px;
+	}
+
+	.main-amount-num {
+		min-width: 500px;
+		margin-left: 180px;
+		margin-right: 30px;
+		font-size: 90px;
+		line-height: 100px;
+		color: #048df5;
+		text-align: center;
+	}
+
+	.ani-scroll-num ul {
+		overflow: hidden;
+		position: relative;
+		width: 50px;
+		height: 100px;
+		display: inline-block;
+	}
+
+	.separator {
+		display: inline-block;
+	}
+
+	.ani-scroll-num li {
+		position: absolute;
+		-webkit-transition: all .5s ease;
+		   -moz-transition: all .5s ease;
+		    -ms-transition: all .5s ease;
+		     -o-transition: all .5s ease;
+		        transition: all .5s ease;
+	}
+
+	.main-title {
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.amount-summary {
+		font-size: 14px;
+	}
+
+	.amount-summary div:first-child {
+		margin-left: 12px;
+	}
+
+	.amount-summary div:last-child {
+		margin-left: 180px;
+	}
+
+	.amount-summary .money {
+		font-family: Arial;
+		color: #e4e7db;
+		font-size: 16px;
+	}
+
+	.percent-completion-block .sub-title {
+		color: #048df5;
+		font-size: 16px;
+	}
+
+	.percent-completion-block .percent {
+		color: #35dee2;
+		font-size: 17px;
+		font-family: Arial;
+	}
+
+	.pay-info-tb th {
+		text-align: left;
+		padding: 20px 0 0 10px;
+	}
+
+	.pay-info-tb td {
+		color: #35dee2;
+		font-size: 21px;
+		padding: 30px 0 0 15px;
+		vertical-align: bottom;
+		font-family: Arial;
+	}
+
+	.hot-sale-list {
+		margin-top: 12px;
+	}
+
+	.hot-sale-item {
+		height: 40px;
+		width: 360px;
+		background-color: #283147;
+		margin-bottom: 5px;
+		color: #c6cbe4;
+	}
+
+	.sale-container {
+		height: 100%;
+	}
+
+	.hot-sale-item:hover .sale-container {
+		-webkit-transform: rotateX(360deg);
+		   -moz-transform: rotateX(360deg);
+		    -ms-transform: rotateX(360deg);
+		     -o-transform: rotateX(360deg);
+		        transform: rotateX(360deg);
+
+	    -webkit-transition: all 1.5s ease;
+	       -moz-transition: all 1.5s ease;
+	        -ms-transition: all 1.5s ease;
+	         -o-transition: all 1.5s ease;
+	            transition: all 1.5s ease;
+	}
+
+	.hot-sale-item .sort-num {
+		width: 20px;
+		text-align: center;
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 12px;
+	}
+
+	.hot-sale-item img {
+		width: 40px;
+		height: 40px;
+	}
+
+	.hot-sale-item .title {
+		display: inline-block;
+		width: 225px;
+		padding-left: 5px;
+		overflow: hidden;
+		vertical-align: middle;
+		white-space: nowrap;
+	}
+
+	.hot-sale-item .total-sale {
+		text-align: right;
+		width: 50px;
+		display: inline-block;
+		vertical-align: middle;
+		color: #35dee2;
+		font-size: 12px;
+		font-family: Arial;
+	}
+
+	.chart-legend {
+		position: relative;
+		left: 55px;
+		top: 32px;
+	}
+
+	.left-legend {
+		color: #048bf5;
+	}
+
+	.right-legend {
+		color: #35dee2;
+		margin-right: 110px;
+	}
+
+	.left-legend .legend-title {
+		border-bottom: 1px solid #048bf5;
+	}
+
+	.right-legend .legend-title {
+		border-bottom: 1px dashed #35dee2;
+	}
+
+	.chart-legend .legend-title {
+		font-size: 12px;
+		font-weight: bold;
+		display: inline-block;
+		line-height: 14px;
+		padding-bottom: 5px;
+	}
+
+	.chart-legend .legend-value {
+		font-size: 32px;
+	}
+
+	.bottom-block .swiper-container {
+		height: 320px;
+	}
+
+	.bottom-block .swiper-pagination-bullet {
+		width: 10px;
+		height: 10px;
+		background: #999;
+	}
+
+	.bottom-block .swiper-pagination-bullet-active {
+		background: #048bf5;
+	}
+
+	.appWeightBlock {
+		position: relative;
+	}
+
+	.appWeightBlock .appWeightState {
+		position: absolute;
+		text-align: center;
+		top: 30px;
+		left: 20px;
+	}
+
+	.appWeightBlock .appWeightState .title {
+		font-size: 12px;
+		display: inline-block;
+	}
+
+	.appWeightBlock .appWeightState .value {
+		font-size: 12px;
+		color: #3a7bdf;
+		display: inline-block;
+	}
+
+	.com-per-bar {
+		width: 150px;
+		height: 5px;
+		border-radius: 5px;
+		background-color: #656d9a;
+		margin-top: 10px;
+		position: relative;
+	}
+
+	.com-per-bar span {
+		display: inline-block;
+		height: 5px;
+		border-radius: 5px;
+		background-color: #30c5cc;
+		position: absolute;
+	}
+
+	.com-per-bar .light {
+		display: inline-block;
+		background-color: #fff;
+		width: 5px;
+		height: 5px;
+		border-radius: 3px;
+		position: absolute;
+		left: 0;
+		box-shadow: 0 0 5px 2px #fff;
+	}
+
+	.header {
+		text-align: center;
+		font-size: 24px;
+		height: 30px;
+		line-height: 30px;
+		color: #35dee2;
+		opacity: 0.8;
+	}
+
+	.footer {
+		height: 32px;
+		line-height: 32px;
+	}
+
+	.lock-oper-block {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+
+	/*  排行列表页  */
+
+	.sort-item {
+		height: 35px;
+		line-height: 35px;
+		background-color: #232837;
+		margin-top: 5px;
+	}
+
+	.sort-item.head {
+		background-color: #2e3242;
+	}
+
+	.sort-item .td_sortnum {
+		width: 50px;
+		font-family: Arial;
+		font-size: 14px;
+	}
+
+	.sort-item .td_shopname {
+		width: 210px;
+		font-size: 14px;
+	}
+
+	.sort-item .td_sales {
+		width: 80px;
+		color: #33d3d9;
+		font-size: 16px;
+		font-family: Arial;
+	}
+
+	.sort-item span {
+		color: #b5bad2;
+		display: inline-block;
+		text-align: center;
+		overflow: hidden;
+	}
+
+	.sort-item.head span {
+		color: #6873a2;
+		font-family: "Microsoft Yahei",Arial,sans-serif;
+		font-size: 14px;
+	}
+
+	.sort-item.current {
+		background-color: #183a5c;
+	}
+
+	.sort-item.current span {
+		color: #33d3d9;
+	}
+
+	.sort-list {
+		width: 354px;
+		margin-right: 25px;
+		margin-bottom: 40px;
+		margin-left: 150px;
+	}
+
+	.sort-list:last-child {
+		margin-right: 0;
+	}
+
+	.category-sub-title {
+		font-size: 16px;
+		font-weight: bold;
+		margin: 0;
+	}
+
+	.category-main-title {
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.category-main-title span {
+		font-size: 12px;
+	}
+
+	.wallet-icon {
+		background: url(bg-icons.png) no-repeat;
+		background-position: 0 0;
+		width: 32px;
+		height: 32px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 5px;
+		margin-top: -2px;
+	}
+
+	.house-icon {
+		background: url(bg-icons.png) no-repeat;
+		background-position: -36px 0;
+		width: 32px;
+		height: 32px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 5px;
+		margin-top: -5px;
+	}
+
+	.thumb-icon {
+		background: url(bg-icons.png) no-repeat;
+		background-position: -72px 0;
+		width: 32px;
+		height: 32px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 5px;
+		margin-top: -5px;
+	}
+
+	.phone-icon {
+		background: url(bg-icons.png) no-repeat;
+		background-position: -109px 0;
+		width: 12px;
+		height: 20px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 5px;
+		margin-top: -3px;
+	}
+
+	.lock-icon {
+		background: url(bg-icons.png) no-repeat;
+		background-position: -59px -64px;
+		width: 56px;
+		height: 56px;
+		display: inline-block;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+
+	.lock-icon.unlock {
+		background-position: 0 -64px;
+	}
+
+	.swiper-container .tip-block {
+		position: absolute;
+		color: #6873a2;
+		bottom: 0;
+	} 
+}

@@ -109,7 +109,7 @@
 									<span class="legend-value">19,291,562</span>
 								</div>
 							</div>
-							<div id="chart" style="height:380px;width:850px;"></div>
+							<div id="chart" style="height:250px;width:580px;"></div>
 						</div>
 						<div class="right-cont-block fl" style="margin-left:-35px;">
 							<div class="main-title"><i class="thumb-icon"></i>热销商品排行</div>
@@ -163,6 +163,7 @@
 					</div>
 				</div>
 				<div class="swiper-pagination"></div>
+				<div class="tip-block">这里是提示文案这里是提示文案</div>
 			</div>
 		</div>
 	</section>
@@ -199,7 +200,7 @@
 	                    axisLabel: {
 	                    	textStyle: {
 	                    		color: '#6873a2',
-	                    		fontSize: 16
+	                    		fontSize: 12
 	                    	}
 	                    },
 	                    splitLine: {
@@ -222,7 +223,7 @@
 	                    axisLabel: {
 	                    	textStyle: {
 	                    		color: '#6873a2',
-	                    		fontSize: 18
+	                    		fontSize: 12
 	                    	},
 	                    	formatter: '{value}万'
 	                    },
@@ -285,11 +286,11 @@
         	var scrollNum = new AniScrollNum($("#main-amount-num"), 1234).init();
 
         	// 临时效果
-        	// setInterval(function(){
-        	// 	var num = scrollNum.getNum();
-        	// 	num += parseInt(Math.random() * 10000);
-        	// 	scrollNum.setNum(num);
-        	// }, 2000);
+        	setInterval(function(){
+        		var num = scrollNum.getNum();
+        		num += parseInt(Math.random() * 10000);
+        		scrollNum.setNum(num);
+        	}, 2000);
 
         	// 圆形百分比 canvas
         	var canvas=document.getElementById('appWeightCanvas');
@@ -297,20 +298,20 @@
 			var circ = Math.PI * 2;
 			var quart = Math.PI / 2;
 
-			canvas.width = 136;
-			canvas.height = 136;
+			canvas.width = 90;
+			canvas.height = 90;
 
 			ctx.beginPath();
-			ctx.arc(68,68,63,0,circ,true);
+			ctx.arc(45,45,42,0,circ,true);
 			ctx.closePath();
 			ctx.strokeStyle = '#656d9a';
 			ctx.lineWidth = 5.0;
 			ctx.stroke();
 
 			ctx.beginPath();
-			ctx.arc(68,68,63,-quart,circ * 0.6864 - quart,false);	//  0.6864 = 68.64% 替换该值
+			ctx.arc(45,45,42,-quart,circ * 0.6864 - quart,false);	//  0.6864 = 68.64% 替换该值
 			ctx.strokeStyle = '#30c5cc';
-			ctx.lineWidth = 5.0;
+			ctx.lineWidth = 3;
 			ctx.stroke();
 
 			
@@ -331,7 +332,7 @@
 				pagination: '.swiper-pagination',
 				paginationClickable: true,
 				heigth: 560,
-				autoplay: 2500,
+				autoplay: false,
 				speed: 800
 			});
 
